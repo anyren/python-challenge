@@ -46,14 +46,12 @@ with open(filepath) as csvfile:
 data = zip(month, profit, profit_change)
 
 # all the counters
-
 total_profit = 0
 change_total = 0
 increase_profit = 0
 decrease_profit = 0
 
-# calculate values
-
+# calculate/assign values
 for row in data:
     total = total + row[1]
     change_total = change_total + row[2]
@@ -63,9 +61,9 @@ for row in data:
     if row[2] < decrease_profit:
         decrease_profit = row [2]
         decrease_month = row[0]
+month_count = row_count
 
 # create output
-month_count = row_count
 output =[]
 analysis_file = os.path.join("analysis", 'financial_analysis.txt')
 output.append("Financial Analysis")
