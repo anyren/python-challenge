@@ -72,7 +72,7 @@ output.append("Financial Analysis")
 output.append("----------------------------")
 output.append(f'Total Months: {month_count}')
 output.append(f'Total: ${total}')
-output.append(f'Average Change: ${change_total/(month_count-1)}')
+output.append(f'Average Change: ${round(change_total/(month_count-1),2)}')
 output.append(f'Greatest Increase in Profits: {increase_profit_month} (${increase_profit})')
 output.append(f'Greatest Decrease in Profits: {decrease_month} (${decrease_profit})')
 
