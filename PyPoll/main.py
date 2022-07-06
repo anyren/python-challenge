@@ -30,7 +30,7 @@ with open(filepath) as csvfile:
     for row in csvreader:
         candidate = row[2]
         if candidate in list(candidates):
-            candidates[candidate] = candidates[candidate] + 1
+            candidates[candidate] += 1
         else:
             candidates[candidate] = 1
 

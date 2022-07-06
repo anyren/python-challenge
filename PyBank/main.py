@@ -40,27 +40,29 @@ with open(filepath) as csvfile:
         profit.append(current_profit)
         profit_change.append(current_profit - previous_month)
         previous_month = current_profit
-        row_count = row_count +1
+        row_count += 1
 
 # zip into new dataset
 data = zip(month, profit, profit_change)
 
 # all the counters
-total_profit = 0
 change_total = 0
 increase_profit = 0
 decrease_profit = 0
 
 # calculate/assign values
 for row in data:
-    total = total + row[1]
-    change_total = change_total + row[2]
-    if row[2] > increase_profit:
-        increase_profit = row[2]
-        increase_profit_month = row[0]
-    if row[2] < decrease_profit:
-        decrease_profit = row [2]
-        decrease_month = row[0]
+    month = row[0]
+    profit = row[1]
+    profit_change = row[2]
+    total += profit
+    change_total += profit_change
+    if profit_change > increase_profit:
+        increase_profit = profit_change
+        increase_profit_month = month
+    if profit_change < decrease_profit:
+        decrease_profit = profit_change
+        decrease_month = month
 month_count = row_count
 
 # create output
