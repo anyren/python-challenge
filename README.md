@@ -1,8 +1,14 @@
-# python-challenge
-Module 3 homework for UMN Data Bootcamp
+# Python Challenges
+This repo contains two analyses - PyBank and PyPoll.
 
-Contains two analyses:
-* PyBank - summarizes profit changes for `budget_data.csv`
-* PyPoll - calculates votes per candidate and winner from `election_data.csv` dataset
+## PyBank 
+This analysis summarizes profit changes for `budget_data.csv` and returns the following output:
+
+![PyBank output](pybank.png)  
+
+## PyPoll 
+This analysis calculates votes per candidate and winner from `election_data.csv` dataset and returns the following output:
+
+![PyPoll output](pypoll.png)
 
 Source data is in the `Resources` folder and a summary text file is in the `analysis` folder for each analysis.
